@@ -10,7 +10,7 @@ class LoginPage(BasePage):
 
     def should_be_login_url(self):
         # реализуйте проверку на корректный url адрес
-        assert self.browser.currern_url == LoginPageLocators.LOGIN_URL, "Opened page URL is not login page URL"
+        assert self.url == LoginPageLocators.LOGIN_URL, "Opened page URL is not login page URL"
 
     def should_be_login_form(self):
         assert self.is_element_present(*LoginPageLocators.LOGIN_FORM), "Login form was not found"
